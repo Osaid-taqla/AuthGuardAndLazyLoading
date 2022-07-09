@@ -1,0 +1,31 @@
+
+  <div class="mx-3 note">
+    <h3><b>Note</b></h3>
+    <span><b> Email:</b> admin@gmail.com</span><br>
+    <span><b>Password :</b> admin123</span>
+  </div>
+<div class="main" fxLayout="column" fxLayoutAlign="center">
+  <div fxLayout="row" fxFlex="65%" fxLayoutAlign="center strech">
+
+    <div class="shadow bg-body rounded text-center" fxFlex="30%" fxLayout="row wrap">
+      <div fxFlex="100%" class="pt-3">
+        <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+        <h1 class="text-primary">Welcome</h1>
+        <h6 class="text-secondary">Please enter your login details</h6>
+      </div>
+      <div fxFlex="100%">
+        <form fxLayout="column" class="p-4 pt-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <input type="text" class="form-control" formControlName="email" placeholder="Email">
+          <input type="password" class="my-3 form-control" formControlName="password" placeholder="Password">
+          <button class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      <div class="forgetSection" fxFlex="100%" fxLayoutAlign="end">
+        <div class="p-3">
+          <a [routerLink]="['/forget-password']" class="text-decoration-none">Forget Password</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
